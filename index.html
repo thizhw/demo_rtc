@@ -37,29 +37,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebRTC Live Video</title>
     <style>
-        #capturedImages {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .capturedImage {
-            text-align: center;
-        }
-        .capturedImage img {
-            width: 200px;
-            height: auto;
-        }
-        /* Position the canvas on top of the video */
         #videoContainer {
             position: relative;
             display: inline-block;
+        }
+        #video {
+            width: 100%;
+            height: auto;
         }
         #canvas {
             position: absolute;
             top: 0;
             left: 0;
             pointer-events: none; /* Allow clicks through the canvas */
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -74,4 +66,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
