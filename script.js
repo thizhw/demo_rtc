@@ -143,7 +143,7 @@ captureButton.addEventListener('click', () => {
     // Create the heading for the image
     const heading = document.createElement('h3');
     heading.innerText = headings[currentHeadingIndex];
-    camhead.textContent = headings[currentHeadingIndex];
+    camhead.textContent = headings[currentHeadingIndex+1];
     imageContainer.appendChild(heading);
 
     // Create an image element and set the captured image as the source
