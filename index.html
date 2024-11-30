@@ -37,34 +37,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebRTC Live Video</title>
     <style>
-        #videoContainer {
-            position: relative;
-            display: inline-block;
+        #capturedImages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
         }
-        #video {
-            width: 100%;
-            height: auto;
+        .capturedImage {
+            text-align: center;
         }
-        #canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none; /* Allow clicks through the canvas */
-            width: 100%;
+        .capturedImage img {
+            width: 200px;
             height: auto;
         }
     </style>
 </head>
 <body>
     <h1>Live Video Stream</h1>
-    <div id="videoContainer">
-        <video id="video" autoplay playsinline></video>
-        <canvas id="canvas"></canvas> <!-- Canvas for overlaying heading -->
-    </div>
+    <video id="video" autoplay playsinline></video>
     <button id="capture">Capture Photo</button>
     <div id="capturedImages"></div> <!-- Container to display captured images -->
+    <canvas id="canvas" style="display:none;"></canvas>
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
