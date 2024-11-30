@@ -201,7 +201,7 @@ async function startVideoStream() {
     }
 }
 
-// Draw video frame with heading text on the canvas
+// Draw the video feed with the heading on the canvas (real-time)
 function drawVideoWithHeading() {
     context.drawImage(video, 0, 0, canvas.width, canvas.height); // Draw video frame
 
@@ -209,6 +209,8 @@ function drawVideoWithHeading() {
     context.font = '30px Arial';
     context.fillStyle = 'white';
     context.fillText(headings[currentHeadingIndex], 20, 40); // Draw heading text
+
+    // Optionally, adjust the heading position dynamically based on text length or canvas size
 }
 
 // Capture photo when the button is clicked
@@ -244,7 +246,7 @@ captureButton.addEventListener('click', () => {
     currentHeadingIndex = (currentHeadingIndex + 1) % headings.length;
 });
 
-// Call the function to continuously draw the video with the heading on the canvas
+// Continuously update the video frame with the heading
 function updateCanvas() {
     drawVideoWithHeading();
     requestAnimationFrame(updateCanvas); // Keep updating at 60fps
@@ -252,6 +254,7 @@ function updateCanvas() {
 
 startVideoStream();
 updateCanvas();
+
 
 
 
