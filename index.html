@@ -13,7 +13,7 @@
 </html>
  -->
 
- <!DOCTYPE html>
+<!--  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,4 +28,50 @@
     <canvas id="canvas" style="display:none;"></canvas>
     <script src="script.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Live Video</title>
+    <style>
+        #capturedImages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .capturedImage {
+            text-align: center;
+        }
+        .capturedImage img {
+            width: 200px;
+            height: auto;
+        }
+        /* Position the canvas on top of the video */
+        #videoContainer {
+            position: relative;
+            display: inline-block;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none; /* Allow clicks through the canvas */
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Video Stream</h1>
+    <div id="videoContainer">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas> <!-- Canvas for overlaying heading -->
+    </div>
+    <button id="capture">Capture Photo</button>
+    <div id="capturedImages"></div> <!-- Container to display captured images -->
+    <script src="script.js"></script>
+</body>
 </html>
+
